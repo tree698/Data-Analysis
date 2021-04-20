@@ -13,6 +13,7 @@ c = reduce(lambda x, y: x+y, [0,1,2,3,4])
 print(c)
 d = reduce(lambda x, y: y+x, 'abcde')
 print(d)
+print(d)
 e = reduce(lambda x: x+1, [2])
 print(e)
 
