@@ -35,6 +35,12 @@ result2 = list(map(f3, ex, ex))    # 두 개 이상의 list에도 적용 가능
 print('#10:', result2)
 
 
+"""with open("sums.txt") as file:
+    for line in file:
+        print(sum(map(int, line.split())))"""
+"""with ~ as 사용함으로써 close() 불필요"""
+
+
 """reduce: Sequence 자료형의 각 요소에 동일한 function을 적용한 값을 통합하여 반환"""
 
 from functools import reduce
