@@ -1,5 +1,6 @@
 Algorithm
 
+
 1) 제한된 공간과 시간 안에서 data를 어떻게 처리할 것인지를 정한 logic
 2) 주어진 input으로 정해진 계산을 수행한 뒤 output을 출력 
 
