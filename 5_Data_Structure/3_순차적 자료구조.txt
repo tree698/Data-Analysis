@@ -1,0 +1,13 @@
+1. 배열, 리스트 
+  - index로 임의의 원소에 접근 : 접근시간 O(1) --> 상수 시간
+  - 중간값을 삭제, 삽입은 O(n)  --> 자리 이동이 일어나기때문
+
+2. stack, queue, dequeue
+  - 제한된 접근(삽입, 삭제)만 허용
+  - stack : LIFO 
+  - queue : FIFO
+  - dequeue : stack + queue 
+
+3. Linked List (연결리스트) 
+  - index로 접근 불가능
+
