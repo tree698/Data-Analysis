@@ -1,0 +1,35 @@
+queue : FIFO 규칙의 순차적 자료구조    (말미잘 : 스택,  사람 : 큐) 
+
+입력 : enqueue(5)
+출력 : dequeue( ) 
+======================
+
+class Queue:
+    def __init__(self):
+        self.items = [ ]    #빈 리스트
+        self.front_index = 0
+ 
+     def enqueue(self, val):
+         self.itmes.append(val)
+
+     def dequeue(self):
+         if self.front_index == len(self.items): 
+             print("Q is empty) 
+             return None 
+         else:
+           x = self.items[front_index]
+           self.index += 1
+           retruen x
+
+=====================
+
+큐 활용 예: Josephus Probelm 
+
+Josephus(n, k):
+   return 최종 생존자 반환 
+
+===================
+
+
+Python에는 deque class가 있다 
+

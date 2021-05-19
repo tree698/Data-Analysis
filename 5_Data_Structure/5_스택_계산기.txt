@@ -1,0 +1,50 @@
+계산기 코드 작성
+============
+
+(infix 수식)   2 + 3 * 5
+(postfix 수식)  2 3 5 + * 
+
+(1) 괄호 삽입  -->  (2+(3*5))
+(2) 연산자의 오른쪽 괄호 다음으로 이동 
+
+예)  3*(2+5)*4 --> ((3*(2+5))*4) --> 3 2 5 + * 4 * 
+================================
+
+
+(1) 스택 이용, infix를 postfix로 변환 
+======================
+
+리스트 : outstack  ---> 최종적으로 operand와 연산자만 남게 된다 
+                                (infix를 postfix로 바꾸는 과정)
+스택 : opstack --> 최종적으로 null
+
+for each token in expression:
+   if token == operand: 
+      outstack.append(token)
+   elif token == '(':
+      opstack.push(token)
+   elif token == ')':
+      opstack에 저장된 연산과 '('를 pop할때까지 pop
+      그리고 outstack에 append
+   elif token in '+*-/':
+       opstack에 token보다 우선순위 높은 연산자 모두 pop 한후 push
+opstack에 남은 연산자는 모두 pop --> outstack으로 이동 
+
+
+(2) 스택 이용, postfix를 계산 
+==================
+
+예) 6 3 2 - 4 * + 
+
+스택 = s
+
+for each token in postfix expression:
+if token == operand:
+    s.push(token)
+elif token in '+*-/':
+    a = s.pop()
+    b = s.pop()
+    s.push(a와 b 연산 결과)
+       
+
+
