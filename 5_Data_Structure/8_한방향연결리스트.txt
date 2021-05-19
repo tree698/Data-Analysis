@@ -1,0 +1,112 @@
+
+class SinglyLinkedList:
+    def __init__(self):
+       self. head = None
+       self.size = 0 
+
+    def pushFront(self, key):
+        new_node = Node(key)    # 노드를 만든다 
+        new_node.next = L.head   #new_node 다음에 head 노드가 오고
+        L.head = new_node         #head node를 new_node로 만듦 
+        L.size += 1     
+
+   def pushBack(self, key):
+       v = Node(key)                #노드를 만든다
+       if len(self) == 0:              #빈 리스트라면 
+          self.head = v
+      else: 
+         tail = self.head              #tail 노드를 찾기 위해 while 사용
+         while tail.next != none:   #tail은 next가 none이다 
+            tail = tail.next
+         tail.next = v 
+      self.size += 1
+
+    def popFront(self):
+      if len(self) == 0:  #빈 리스트라면
+          return None
+     else: 
+         x = self.head
+         key = x.key
+        self.head = x.next
+        self.size -= 1
+        del x 
+        return key 
+
+    def popBack(self):
+       if len(self) == 0:  #빈 리스트라면
+          return None
+       else: 
+         prev, tail = None, self.head
+         while tail.next != None:
+              prev = tail
+              tail = tail.next 
+         if len(self) == 1:
+            self.head = None
+         else:
+              prev.next = tail.next
+              key = tail.key
+              del tail
+              self.size -= 1
+              return key 
+
+==========================
+L   --->  3  --> 9 --> -1 --> 4
+(L : head는 3을 가리키고 size는 3임)
+
+L = SingleLinkedList( )
+L.pushFront(-1)
+L.pushFront(9)
+L.pushFront(3) 
+L.pushBack(4)
+
+=====================
+
+pushFront   O(1)
+popFront    O(1)
+pushBack    O(n)
+popBack     O(n) 
+
+=====================
+탐색 
+
+def search(self, key): 
+    # key값의 노드를 리턴, 없으면 None 리턴 
+    v = self.head
+    while v != None:
+        if v.key == key:
+            return v 
+        v = v.next 
+     return None (or return v) 
+
+
+=====================
+제너레이터 (generator) 
+
+----------------------------------
+리스트 A = [3, 5, -1, 9]
+for x in A:
+   print(x) 
+----------------------------------
+
+한 방향 연결리스트는 for in 루프를 사용할 수 없다 
+그러나, yield를 포함한 iterator 메소드를 만들어 두면 for in 루프를 사용할수 있다 
+한방향 연결 리스트에서 각 노드의 값을 순차적으로 출력 가능
+만일, 제너레이터를 사용하지 않으면 while을 사용하여 각 노드의 값을 출력한다
+
+def __iterator__(self):
+  v = self.head
+  while v != None:
+     yield v              #yield는 return과 유사하다 
+     v = v.next 
+
+---------------------
+
+for x in L(연결리스트):    #간단하다 
+   print(x) 
+
+
+ 
+
+
+
+
