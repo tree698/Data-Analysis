@@ -1,0 +1,37 @@
+해시 테이블 (Hash Table) : 매우 빠른 평균 삽입, 삭제, 탐색 연산 제공 
+
+(1) Table : List
+(2) Hash Function
+(3) Collision resolution method  (충돌시 해결 방안) 
+=====================
+
+*** hash function
+perfect hash function : one-to-one 이상적, but 비현실적
+universal hash function : 
+   - 두개의 서로다른 key값의 해시함수가 같을 확률이 slot의 크기에 반비례
+   - Pr(f(x) == f(y)) = 1/m   (m=slot 크기) 
+
+c-universal hash function
+   - (1/m) 달성이 어려워 c/m인 경우로 설정
+   - Pr(f(x) == f(y)) = c/m 
+
+=====================
+좋은 해시 함수는...  --> 상호간 trade-off
+(1) less collition
+(2) fast computation
+=====================
+
+
+*** 충돌회피 방법 (collison resolution method)
+
+(1) open addressing : 충돌시 주위의 빈 공간을 활용
+  - linear probing --> 한칸씩 내려가며 빈 공간을 찾는다 
+  - quadratic probing --> 정수의 제곱만큼 내려가며 빈 공간을 찾는다 
+  - double hashing --> 두개의 해시함수 사용. 
+
+(remove時, 빈칸을 채워야 한다 )
+
+(2) chaning : 각 slot에 연결리스트를 만들어 충돌 時, 사용 
+
+
+

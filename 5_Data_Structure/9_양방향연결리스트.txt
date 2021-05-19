@@ -1,0 +1,10 @@
+이동연산 
+moveAfter(self, a, x)     #노드 a를 노드 x 다음으로 이동 
+   --> splice(a, a, x)
+moveBefore(self, a, x)   #노드 a를 노드 x 전으로 이동
+   --> splice(a, a, x.prev)
+
+--------------------
+삽입연산
+inserAfter(self, x, key)   #key값을 x 노드 다음에 삽입 
+  --> moveAfter(Node(key), x)
