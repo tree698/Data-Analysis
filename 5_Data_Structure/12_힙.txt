@@ -54,8 +54,10 @@ make-heap을 통해 이진트리를 heap으로 바꾸고
 제공 연산을 통해 삽입, 삭제 수행 
 ==============================
 
-(make-heap) 
+heap은 search 연산이 없다 --> 비효율적이기 때문
+그래서, heap은 insert / find-max / delete-max가 빈번한 곳에 사용된다. 
 
+max-heap과 같이 min-heap을 만들수도 있다 
 
 
 

@@ -1,0 +1,69 @@
+이진트리 (Binary Tree)
+
+표현법 3. 노드와 링크 (key, left, right)
+
+class Node:
+   def __init__(self, key):   <-- left, right를 주어도 된다 
+      self.key = key
+      self.partnet = self.left = self.right = None  #초기화
+
+  def __str__(self)
+      return str(self.key)
+
+  def preorder(self):       #현재 방문중이 노드 = self
+      if self != None:       #MLR
+         print(self.key)
+         if self.left:
+             self.left.preorder()
+         if self.right:
+             self.right.preorder()
+
+   def inorder(self):
+      if self != None:
+         if self.left:
+            self.left.preorder()
+         print(self.key)
+         if self.right:
+            self.right.preorder()
+
+    def postorder(self):
+       if self != None:
+         if self.left:
+            self.left.preorder()
+         if self.right:
+            self.right.preorder()
+         print(self.key)
+
+----------------------------------------------------
+            6 
+      9           1
+       5
+
+a = Node(6)
+b = Node(9)
+c = Node(1)
+d = Node(5)
+-----------------
+a.left = b
+a.right = c
+b.parent = a
+c.parent = a 
+b.right = d
+d.parent = b
+
+=========================
+순회(traversal) : 각 노드를 빠지지 않고 방문하면서 key값을 출력 
+ - preorder    : MLR 
+ - inorder      : LMR
+ - postorder  : LRM     (M:루트, L:right, R:right)
+========================
+
+
+이진트리 : 모양을 모르는 상태 
+preorder : FBADCEGIH
+inorder : ABCDFFGHI 
+
+---> 원래 트리를 추측할 수 있다 
+
+
+   
