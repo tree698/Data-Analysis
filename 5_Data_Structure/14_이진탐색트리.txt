@@ -1,0 +1,51 @@
+이진탐색트리 (Binary Search Tree) : BST
+ - 왼쪽 subtree key 값 < 노드 key 값 < 오른쪽 subtree key 값 
+
+class BST:
+  def __init__(self):
+     self.root = None
+     self.size = 0
+
+  def __len__(self):
+     return self.size
+
+  def __iter__(self):
+     return self.root.__iter__()   <--- generator 
+
+
+t = BST()
+t.insert(5)
+t.insert(15)
+
+-------------------------------------
+search:
+
+def find_loc(self, key):        #key 값 노드가 있으면 해당 노드를 return, 
+  if self.size == 0:             #없으면 노드가 삽입될 부모 노드 return 
+     return None
+  p = none                      #p는 v의 부모 노드 
+  v = self.root 
+  while v != None:
+    if v.key == key.return:
+       return v
+    elif v.key < key:
+       p = v
+       v = v.right 
+    else:
+       p = v
+       v = v.left 
+  return p 
+
+def search(self, key):
+   r = self.find_lic(key)
+   if v == None:
+     return None
+  else:
+    return v 
+
+-------------------------------------
+삭제연산(delete) --> 두가지 방법 
+  (1) deleteByMerging
+  (2) deleteByCopying 
+
+** deleteByMerging
