@@ -1,0 +1,9 @@
+그래프 순회 (Graph Traversal) : DFS (Depth First Search) // BFS (Breath First Search)
+
+- preorder : 자신을 먼저 방문
+- inorder : 자신을 가운데 방문
+- postorder : 자신을 나중에 방문 
+
+
+
+
