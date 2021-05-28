@@ -1,4 +1,9 @@
-Shortest Path Algorithm : Bellman Ford & Dijkstra Algorithm 
+Shortest Path Algorithm (최단 경로)
+
+=======================================
+1) Bellman Ford & Dijkstra Algorithm 
+- 가능한 모든 경로에 대해 구간 경로별로 relax()를 구해 최소 구간 경로를 구한다
+- O(n^3)
 
 relax(u,v) 
 
@@ -8,8 +13,15 @@ d[d] = d[c] + w(c, d)
 d[c] = d[b] + w(b, c)
 d[b] = w(a, b) 
 _________________________________________
-
 for i in range(n-1):
     for each edge(u, v) in G:
         if dist[u] > dis[u] + w(u,v):
               relax (u,v) 
+
+
+=======================================
+(2) Dijkstra Algorithm
+ - 각 노드에 대해 그 노드로 가는 경로 중 최소 경로를 구해 나간다 
+ - O(n^2logn)
+
+
