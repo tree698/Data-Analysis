@@ -1,0 +1,15 @@
+Shortest Path Algorithm : Bellman Ford & Dijkstra Algorithm 
+
+relax(u,v) 
+
+a --> b --> c --> d
+
+d[d] = d[c] + w(c, d)
+d[c] = d[b] + w(b, c)
+d[b] = w(a, b) 
+_________________________________________
+
+for i in range(n-1):
+    for each edge(u, v) in G:
+        if dist[u] > dis[u] + w(u,v):
+              relax (u,v) 
