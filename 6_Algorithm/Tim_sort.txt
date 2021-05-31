@@ -1,0 +1,26 @@
+Tim Sorting Algorithm
+
+Python 내장 정렬 함수  ===>  X.sort()
+ - Tim Sorting을 사용 (java, JS, swift에서도 사용)
+ - insertion sort + merge sort가 혼합된 것
+ - 최적화 기법 : 가능하면 적게 비교하고, 메모리를 적게 사용하도록...
+
+ - O(nlogn)
+ - memory: O(n) 추가 사용
+ - stable
+ - 입력이 정렬된 상태면 O(n)
+
+-----------------------------------
+** insertion sort
+   3 -1 2 7 6 9 4  --> 3부터 하나씩 비교하며 자리를 정함 
+
+** merge sort  --> 2개로 나누고 다시 2개로 나누어 각각 정렬한 뒤 합한다 
+                          (추가 메모리가 필요하다)
+-----------------------------------
+
+Tim sort에서 2개로 나눌때 각각은 크기가 다를수 있다 
+
+
+
+  
+
