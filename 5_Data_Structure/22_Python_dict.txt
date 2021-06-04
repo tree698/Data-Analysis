@@ -1,0 +1,25 @@
+dict 자료구조가 Python 내부에서 어떻게 구현되었을까?
+
+hash table 
+ - (key, value)가 hash table에 저장되려면, 
+ - key 값에 대한 hash function이 있어야 한다 
+ - 충돌이 일어나면, collision resolution method로 해결
+
+========================
+** collision resolution method
+ (1) open addressing
+      - linear probing
+      - quadratic probing 
+ (2) chaining 
+ (3) resize
+========================
+
+** dict in Python
+(1) resize
+   - 초기 size = 8
+   - 2/3가 채워지면 size를 2배로 늘림  ---> amortized time analysis 
+   - 항상, 1/3은 비워 있음  --> set, insert, remove, search의 평균 O(1)
+
+(2) hash function
+(3) open addressing 
+(4) 
